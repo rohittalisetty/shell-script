@@ -32,7 +32,7 @@ fi
 for package in $@
 do
     dnf list installed $package &>>LOG_FILE_NAME
-    if [ $? -ne o ]
+    if [ $? -ne 0 ]
     then
         dnf install $package -y &>>$LOG_FILE_NAME 
         VALIADTE $? "Installing $package"
