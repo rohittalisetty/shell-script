@@ -50,3 +50,5 @@ then
 fi
 
 echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE-name
+
+FILES=$(find $SOURCE_DIR -name "*.log" +mtime $DAYS)
